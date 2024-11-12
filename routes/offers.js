@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const router = express.Router();
 const Offer = require("../models/Offer");
@@ -57,3 +58,5 @@ router.get("/offers/:id", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+
+module.exports = router;
